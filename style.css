@@ -1,0 +1,162 @@
+body {
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+/* gatto mario rossi */
+.card-1 {
+    border-radius: 20px;
+    width: 430px;
+    height: 600px;
+    background-color: gray;
+    box-shadow: 5px 8px 10px;
+}
+
+/* gatto elis miao */
+.card-2 {
+    border-radius: 20px;
+    width: 430px;
+    height: 600px;
+    background-color: gray;
+    box-shadow: 5px 8px 10px;
+}
+
+/* gatto gattino micino */
+.card-3 {
+    border-radius: 20px;
+    width: 430px;
+    height: 600px;
+    background-color: gray;
+    box-shadow: 5px 8px 10px;
+}
+
+/* prima riga */
+.first-line {
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cerchio {
+    background-color: white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.name-date p {
+    margin: 0;
+    padding: 0;
+}
+
+.name-date p:first-child {
+    font-size: 1.4em;
+}
+
+.name-date p:last-child {
+    color: white;
+}
+
+.left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+/* fine prima riga */
+
+/* seconda riga */
+.img-gatto picture img {
+    width: 100%;
+    height: 100%;
+}
+
+/* terza riga */
+.third-line {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.third-line .like-comments img:first-child {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+}
+
+.third-line .like-comments img:last-child {
+    width: 30px;
+    height: 100%;
+}
+
+/* quarta riga */
+.forth-line .description p {
+    font-size: 1.1em;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* mobile */
+@media screen and (max-width: 375px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .cerchio {
+        height: 45px;
+        width: 45px;
+    }
+
+    .card-1,
+    .card-2,
+    .card-3 {
+        max-width: 350px;
+        height: fit-content;
+    }
+}
+
+/* tablet */
+@media screen and (min-width:376px) and (max-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        max-width: 750px;
+        gap: 15px;
+    }
+
+    .cerchio {
+        height: 60px;
+        width: 60px;
+    }
+
+    .card-1,
+    .card-2,
+    .card-3 {
+        max-width: 350px;
+    }
+}
