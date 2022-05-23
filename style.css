@@ -1,20 +1,25 @@
 body {
-    width: fit-content;
+    max-width: fit-content;
+    height: calc(100vh - 20px);
     margin-right: auto;
     margin-left: auto;
+    display: flex;
+    align-items: center;
 }
 
 .container {
+    max-width: 1280px;
     display: flex;
     flex-direction: row;
+    height: fit-content;
     gap: 50px;
 }
 
 /* gatto mario rossi */
 .card-1 {
     border-radius: 20px;
-    width: 430px;
-    height: 600px;
+    max-width: 100%;
+    max-height: 100%;
     background-color: gray;
     box-shadow: 5px 8px 10px;
 }
@@ -22,8 +27,8 @@ body {
 /* gatto elis miao */
 .card-2 {
     border-radius: 20px;
-    width: 430px;
-    height: 600px;
+    max-width: 100%;
+    max-height: 100%;
     background-color: gray;
     box-shadow: 5px 8px 10px;
 }
@@ -31,8 +36,8 @@ body {
 /* gatto gattino micino */
 .card-3 {
     border-radius: 20px;
-    width: 430px;
-    height: 600px;
+    max-width: 100%;
+    max-height: 100%;
     background-color: gray;
     box-shadow: 5px 8px 10px;
 }
@@ -83,7 +88,6 @@ body {
     align-items: center;
     margin-right: 10px;
 }
-
 /* fine prima riga */
 
 /* seconda riga */
@@ -116,10 +120,18 @@ body {
     font-size: 1.1em;
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 30px;
 }
 
 /* mobile */
 @media screen and (max-width: 375px) {
+    body {
+        margin-right: auto;
+        margin-left: auto;
+        align-items: unset;
+        height: 100%;
+    }
+
     .container {
         display: flex;
         flex-direction: column;
@@ -130,17 +142,17 @@ body {
         height: 45px;
         width: 45px;
     }
-
-    .card-1,
-    .card-2,
-    .card-3 {
-        max-width: 350px;
-        height: fit-content;
-    }
 }
 
 /* tablet */
 @media screen and (min-width:376px) and (max-width: 768px) {
+    body {
+        margin-right: auto;
+        margin-left: auto;
+        align-items: unset;
+        height: 100%;
+    }
+    
     .container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -152,11 +164,5 @@ body {
     .cerchio {
         height: 60px;
         width: 60px;
-    }
-
-    .card-1,
-    .card-2,
-    .card-3 {
-        max-width: 350px;
     }
 }
